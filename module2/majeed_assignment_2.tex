@@ -1,0 +1,120 @@
+\documentclass[12pt]{article}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\geometry{a4paper, margin=1in}
+\usepackage{array} % Good practice to include when using >{...}
+\newcommand{\pagebar}{
+  \noindent\rule{\textwidth}{1pt}\\
+}
+\begin{document}
+
+\noindent 535.641 Mathematical Methods Assignment 2
+
+\vspace{1cm}
+
+\noindent Ben Minnick \hfill Name: \underbar{Haadi Majeed}
+
+\vspace{1cm}
+
+\begin{center}
+\Large % Make the font size larger for the table
+\begin{tabular}{|c|>{\raggedleft\arraybackslash}p{2cm}|} % Changed to right-aligned p{2cm}
+\hline
+\rule{0pt}{1.2em} 1 & /20 \\ % Added vertical spacing with \rule
+\hline
+\rule{0pt}{1.2em} 2 & /20 \\
+\hline
+\rule{0pt}{1.2em} 3 & /20 \\
+\hline
+\rule{0pt}{1.2em} 4 & /20 \\
+\hline
+\rule{0pt}{1.2em} TOTAL & /80 \\
+\hline
+\end{tabular}
+\end{center}
+
+\newpage
+
+1. In the following problems check to see if the set $S$ is a subspace of the corresponding
+vector space. If it is not, explain why not. If it is, then find a basis and the dimension.
+(a)
+$$
+S = \left\{ \begin{bmatrix} x_1 \\ x_2 \\ x_3 \end{bmatrix} \, , \ 2x_1 + x_2 = 1 \right\} \subset \mathbb{R}^3
+$$
+\\
+Testing Relevant Axioms:\\
+A4:
+\begin{center}
+  $\begin{bmatrix}
+    0\\0\\0
+  \end{bmatrix}$ (the zero vector) must be in the set\\
+  $2(0) + 0 = 0 \therefore 0 = 1$ which is a contradiction, and thus not in $S$ 
+\end{center}
+\pagebar
+(b)
+$$
+S = \left\{ \begin{bmatrix} x_1 \\ x_2 \end{bmatrix} \, , \ x_1 \leq x_2 \right\} \subset \mathbb{R}^2
+$$
+\pagebar
+(c)
+$$
+S = \left\{ \begin{bmatrix} a & 0 \\ 0 & -a \end{bmatrix} \, , \ \forall a \in \mathbb{R} \right\} \subset \mathbb{R}^{2 \times 2}
+$$
+\pagebar
+(d)
+$$
+S = \left\{ f(x) \, , \ \frac{df}{dx} = A\sin(2x), \forall A \in \mathbb{R} \right\} \subset \mathbb{R}
+$$
+
+\newpage
+
+2. Use Cramer's rule to compute the solutions of the system
+$$
+\begin{aligned}
+2x_1 + x_2 &= 7 \\
+-3x_1 + x_3 &= -8 \\
+x_2 + 2x_3 &= -3
+\end{aligned}
+$$
+
+\newpage
+
+3. Read section 1.15 of the instructor's notes. You are tasked with: 1. developing a model
+for an elastic beam supported on the edges, and 2. applying this model for a specific
+application, i.e. find the loading given a displacement. You decide to discretize the
+beam so that there are three nodes ($P_1, P_2, P_3$). Assume Hooke's law applies.\\
+(a) You have tested the beam under unit forces applied to each node and respectfully
+found the following displacements:
+$$
+\mathbf{y}_1 = \begin{bmatrix} 2 \\ 2 \\ 0 \end{bmatrix} \, , \ \mathbf{y}_2 = \begin{bmatrix} 2 \\ 1 \\ 1 \end{bmatrix} \, , \ \mathbf{y}_3 = \begin{bmatrix} 0 \\ 1 \\ 0 \end{bmatrix}
+$$
+where $\mathbf{y}_1$ is the displacement that results from loading $\mathbf{F}_1 = [1, 0, 0]^T$, $\mathbf{y}_2$ is
+the displacement from loading $\mathbf{F}_2 = [0, 1, 0]^T$, and $\mathbf{y}_3$ is the displacement from
+loading $\mathbf{F}_3 = [0, 0, 1]^T$.
+Given this information, build the model and construct the flexibility matrix.\\
+\pagebar
+(b) Using the model you have just derived, determine the loading that produces the
+displacement
+$$
+\mathbf{y} = \begin{bmatrix} 4 \\ 5 \\ 3 \end{bmatrix}
+$$
+
+\newpage
+
+4. Consider the $(x, y)$ vertices of an equilateral triangle in $\mathbb{R}^2$ given by,
+$$
+(0,0), (1,0), (.5, \sqrt{3}/2)
+$$
+Perform the following actions in order using matrix transformations:\\
+(a) Reflect the triangle over the $x$-axis,\\
+\pagebar
+(b) Compress the triangle along the $y$-axis by a factor of 2,\\
+\pagebar
+(c) Rotate the triangle counterclockwise by $\pi/6$ radians about the origin, and\\
+\pagebar
+(d) Shear the triangle along the $x$-axis by a factor of 0.5.\\
+Clearly show the matrix transformations used and compute the final set of vertices of
+the triangle.
+
+\end{document}
